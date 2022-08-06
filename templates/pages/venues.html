@@ -1,0 +1,8 @@
+{% extends 'layouts/main.html' %} {% block title %}Fyyur | Venues{% endblock %} {% block content %} {% for area in areas %}
+{{ area.city }}, {{ area.state }}
+
+    {% for venue in area.venues %}
+    {{ venue.name }}
+    {% endfor %} 
+
+{% endfor %} {% endblock %}

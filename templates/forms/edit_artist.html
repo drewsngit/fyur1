@@ -1,0 +1,14 @@
+{% extends 'layouts/main.html' %} {% block title %}Edit Artist{% endblock %} {% block content %}
+Edit artist {{ artist.name }}
+Name {{ form.name(class_ = 'form-control', autofocus = true) }}
+City & State
+{{ form.city(class_ = 'form-control', placeholder='City', autofocus = true) }}
+{{ form.state(class_ = 'form-control', placeholder='State', autofocus = true) }}
+Phone {{ form.phone(class_ = 'form-control', placeholder='xxx-xxx-xxxx', autofocus = true) }}
+Genres Ctrl+Click to select multiple {{ form.genres(class_ = 'form-control', placeholder='Genres, separated by commas', autofocus = true) }}
+Facebook Link {{ form.facebook_link(class_ = 'form-control', placeholder='http://', autofocus = true) }}
+Image Link {{ form.image_link(class_ = 'form-control', placeholder='http://', autofocus = true) }}
+Website Link {{ form.website_link(class_ = 'form-control', placeholder='http://', autofocus = true) }}
+Looking for Venues {{ form.seeking_venue(placeholder='Venue', autofocus = true) }}
+Seeking Description {{ form.seeking_description(class_ = 'form-control', autofocus = true) }}
+{% endblock %} 

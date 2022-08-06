@@ -1,0 +1,17 @@
+
+🔥
+
+{% if (request.endpoint == 'venues') or (request.endpoint == 'search_venues') or (request.endpoint == 'show_venue') %}
+{% endif %} {% if (request.endpoint == 'artists') or (request.endpoint == 'search_artists') or (request.endpoint == 'show_artist') %}
+{% endif %}
+
+Venues
+Artists
+Shows
+
+{% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+× {{ message }}
+{% endfor %} {% endif %} {% endwith %} {% block content %}{% endblock %}
+
+Fyyur © All Rights Reserved.
+{% block footer %}{% endblock %}
